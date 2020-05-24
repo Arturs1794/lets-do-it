@@ -1,0 +1,93 @@
+.gridcontainer{
+    display: grid;
+    height: 100vh; 
+     grid-template-columns:repeat(3, 1fr);
+     grid-template-rows: 15% 25% 60%;
+    
+     
+}
+
+.header {
+display: grid;
+grid-column-start: 1;
+grid-column-end: 4;
+grid-template-columns: 30% 40% 30%;}
+
+.logo {
+    display:grid;
+    background-color: aqua; 
+grid-column-start: 1;
+grid-column-end: 2}
+.nav {background-color: rgb(238, 74, 128);
+    grid-column-start: 2;
+    grid-column-end: 3}
+.tool {background-color: blueviolet;}
+
+.herocontainer {
+    
+    display:grid;
+    
+    grid-column-start: 1;
+    grid-column-end: 3;
+    
+}
+.herotext {background-color: crimson;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+.herocall {background-color: darkblue;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+
+
+
+.main {
+    
+    display:grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.article {background-color: darkgoldenrod;}
+
+.list {background-color: darkolivegreen;}
+
+.side { display:grid;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-template-rows: 30% 70%;
+}
+
+.add {background-color: darkred;}
+
+.sidebar {background-color: dimgray;}
+
+
+
+
+
+
+
+
+.footercontent {
+   
+    height: 60px;
+    padding: 10px;
+    text-align:center;
+    background-color:cadetblue;(30, 162, 253)
+ }
+
+
+
+
+
+/* odd children selector */
+.item:nth-child(2n +1) {
+    background-color: peru;
+}
