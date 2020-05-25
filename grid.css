@@ -1,44 +1,119 @@
 .gridcontainer{
     display: grid;
+    border: solid black;
     height: 100vh; 
      grid-template-columns:repeat(3, 1fr);
-     grid-template-rows: 15% 25% 60%;
+     grid-template-rows: 20% 30% 50%;
+    
+    
     
      
 }
 
 .header {
 display: grid;
+border-bottom: groove whitesmoke;
 grid-column-start: 1;
 grid-column-end: 4;
-grid-template-columns: 30% 40% 30%;}
+grid-template-columns: 25% 50% 25%;}
+
+.header {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .logo {
     display:grid;
-    background-color: aqua; 
-grid-column-start: 1;
-grid-column-end: 2}
-.nav {background-color: rgb(238, 74, 128);
+    background-color: white;
+grid-column-start: 1px;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
+
+margin-left: 30px;
+
+}
+
+
+}
+
+.nav {background-color: white);
+    
     grid-column-start: 2;
-    grid-column-end: 3}
-.tool {background-color: blueviolet;}
+    grid-column-end: 3;
+    justify-content: center;
+text-align: center;
+}
+
+
+.nav li{
+    padding: 7px;
+    display: inline-block;
+}
+.nav ul {
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-links a{
+    display: inline-block;
+    color:  rgb(67, 106, 153);
+    text-align: match-parent;
+    padding: 5px 5px;
+text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+
+}
+.nav-links a:hover{
+    background: azure ;
+    border-radius: 10%;
+}
+
+.tool {    
+    grid-area: ts;
+    text-align: center;
+    padding: 10px;
+    justify-self: right;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 1;
+    display: grid;
+}
 
 .herocontainer {
     
     display:grid;
-    
+
+    border-right: whitesmoke solid;
     grid-column-start: 1;
     grid-column-end: 3;
+    border-bottom: whitesmoke solid;
     
 }
-.herotext {background-color: crimson;
+.herotext {
+    background-color:white;
+ 
 grid-row-start: 1;
 grid-row-end: 3;
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 10px;
+margin-right: 10px;
+font-style: italic;
+font-size: 14px;
+
 }
 
-.herocall {background-color: darkblue;
+.herocall {background-color: white;
     grid-row-start: 1;
     grid-row-end: 3;
+    font-style: italic;
+    font-size: small;
+    margin: 10px;
+    color: teal;
 }
 
 
@@ -47,27 +122,35 @@ grid-row-end: 3;
 .main {
     
     display:grid;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-.article {background-color: darkgoldenrod;}
+    border-right: solid whitesmoke;
+margin-top: 10px;
+    
+    grid-template-columns: 30% 70%;
 
-.list {background-color: darkolivegreen;}
+    grid-area: 3 / 1 / span 4 / span 2;
+}
+.article {background-color: white;
+
+font-style:italic;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+margin: 15px;
+
+    
+}
+
+.list {background-color: white;
+margin: 10px;}
 
 .side { display:grid;
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    grid-template-rows: 30% 70%;
+
+    grid-area: 2 / 3 / span 4 / span 4;
+    grid-template-rows: 40% 60%;
 }
 
-.add {background-color: darkred;}
+.add {background-image: url("/unnamed.png");}
 
-.sidebar {background-color: dimgray;}
-
+    .sideba {margin: 10px;}
 
 
 
@@ -76,18 +159,59 @@ grid-row-end: 3;
 
 
 .footercontent {
-   
+   z-index: 1;
     height: 60px;
-    padding: 10px;
-    text-align:center;
+    padding:align-content:center;
     background-color:cadetblue;(30, 162, 253)
  }
 
 
 
+/* Media quary*/
 
 
-/* odd children selector */
-.item:nth-child(2n +1) {
-    background-color: peru;
+@media screen and (max-width: 992px)
+{
+    .tool{
+        display:none;
+    }
+
+    @media screen and (max-width: 576px)
+{
+    .add {
+        display: none;
+    }
+    @media screen and (max-width: 576px)
+{
+    .sideba {
+        display: none;}
+
+        @media screen and (max-width: 576px) {
+       .herocontainer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+        }
 }
+
+@media screen and (max-width: 576px)
+{
+    .logo {
+        display: none;}
+
+    @media screen and (max-width: 576px) {
+   .main {
+grid-column-start: 1;
+grid-column-end: 4;
+grid-row-start: 3;
+grid-row-end: 4;
+    }
+    @media screen and (max-width: 576px) {
+        .nav {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    }
