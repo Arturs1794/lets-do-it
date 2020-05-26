@@ -209,6 +209,7 @@ margin: 10px;}
 {
     .logo {
         display: none;}
+    }
 
     @media screen and (max-width: 576px) {
    .list {
