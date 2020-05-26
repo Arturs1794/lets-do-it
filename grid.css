@@ -157,7 +157,7 @@ margin: 10px;}
     grid-template-rows: 40% 60%;
 }
 
-.add {background-image: url("/unnamed.png");}
+.add {background-image: url("unnamed.png");}
 
     .sideba {margin: 10px;}
 
