@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+.responsive-img {
+
+    max-width: 90%;
+    height: auto;
+}
+.logo {  
+    
+    display:flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.herotext {
+    display: flexbox;
+    overflow: hidden scroll;
+}
+
+.main {
+    display: flexbox;
+    overflow: hidden scroll;
+
+
+    .nav {
+        display: flexbox;
+    overflow: hidden;
+    }
+    
+}
+
+
+
+.gridcontainer{
+    display: grid;
+    border: solid black;
+    height: 100vh; 
+     grid-template-columns:repeat(3, 1fr);
+     grid-template-rows: 20% 30% 50%;
+    
+    
+    
+     
+}
+
+.header {
+display: grid;
+border-bottom: groove whitesmoke;
+grid-column-start: 1;
+grid-column-end: 4;
+grid-template-columns: 25% 50% 25%;}
+
+.header {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo {
+    display:grid;
+    background-color: white;
+grid-column-start: 1px;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 2;
+
+margin-left: 30px;
+
+}
+
+
+}
+
+.nav {background-color: white);
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: center;
+text-align: center;
+}
+
+
+.nav li{
+    padding: 7px;
+    display: inline-block;
+}
+.nav ul {
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+}
+
+.nav-links a{
+    display: inline-block;
+    color:  rgb(67, 106, 153);
+    text-align: match-parent;
+    padding: 5px 5px;
+text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+
+}
+.nav-links a:hover{
+    background: azure ;
+    border-radius: 10%;
+}
+
+.tool {    
+    grid-area: ts;
+    text-align: center;
+    padding: 10px;
+    justify-self: right;
+    align-items: center;
+    grid-column: 3;
+    grid-row: 1;
+    display: grid;
+}
+
+.herocontainer {
+    
+    display:grid;
+
+    border-right: whitesmoke solid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-bottom: whitesmoke solid;
+    
+}
+.herotext {
+    background-color:white;
+ 
+grid-row-start: 1;
+grid-row-end: 3;
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 10px;
+margin-right: 10px;
+font-style: italic;
+font-size: 14px;
+
+}
+
+.herocall {background-color: white;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-style: italic;
+    font-size: small;
+    margin: 10px;
+    color: teal;
+}
+
+
+
+
+.main {
+    
+    display:grid;
+    border-right: solid whitesmoke;
+margin-top: 10px;
+    
+    grid-template-columns: 30% 70%;
+
+    grid-area: 3 / 1 / span 4 / span 2;
+}
+.article {background-color: white;
+
+font-style:italic;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 15px;
+margin: 15px;
+
+    
+}
+
+.list {background-color: white;
+margin: 10px;}
+
+.side { display:grid;
+
+    grid-area: 2 / 3 / span 4 / span 4;
+    grid-template-rows: 40% 60%;
+}
+
+.add {background-image: url("/unnamed.png");}
+
+    .sideba {margin: 10px;}
+
+
+
+
+
+
+
+.footercontent {
+   z-index: 1;
+    height: 60px;
+    padding:align-content:center;
+    background-color:cadetblue;(30, 162, 253)
+ }
+
+
+
+/* Media quary*/
+
+
+@media screen and (max-width: 992px)
+{
+    .tool{
+        display:none;
+    }
+
+    @media screen and (max-width: 576px)
+{
+    .add {
+        display: none;
+    }
+    @media screen and (max-width: 576px)
+{
+    .sideba {
+        display: none;}
+
+        @media screen and (max-width: 576px) {
+       .herocontainer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+        }
+}
+
+@media screen and (max-width: 576px)
+{
+    .logo {
+        display: none;}
+
+    @media screen and (max-width: 576px) {
+   .main {
+grid-column-start: 1;
+grid-column-end: 4;
+grid-row-start: 3;
+grid-row-end: 4;
+    }
+    @media screen and (max-width: 576px) {
+        .nav {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+         
+    <main>
+        <div class="gridcontainer">
+            <div class="header">
+                <div class="logo"> <img class="responsive-img" src="/pic.jpg"> </div>
+           
+                    <ul class="nav">
+                        <li class="nav-links"><a href="#about">ABOUT US</a></li>
+                        <li class="nav-links"><a href="#blog">APPLY FOR JOB</a></li>
+                        <li class="nav-links"><a href="#contact">CONTACT US</a></li>
+                    </ul> 
+                
+                
+                </nav>
+                
+            <div class="tool"><input type="search" size="30px 50px" placeholder="Search here"></div>
+        </div>
+        <div class="herocontainer">
+            <div class="herotext">
+                <h1> NORMOWAY: who are we?</h1>
+                <p>For 30 years, NORMOWAY telephone service has guaranteed high-quality telephone handling for entrepreneurs and their companies.
+
+                    We speak from experience
+                    Your telephone traffic is the calling card of your company. Delivering quality is therefore absolutely necessary to maintain or grow your business. Our telephone service will help you with this. You can contact our telephone services for very personal and professional telephone handling. We work with the latest telephone exchange and software, but require an old-fashioned attitude from our operators regarding the handling of your telephone traffic.</p>
+            </div>
+            <div class="herocall"><h1 class="emphasize">Join Us!
+                </h1><br><button>Click here!</button></div>
+        </div>
+
+        <div class="main">
+            <div class="article">
+                <h2>Why choose us?</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nam deserunt omnis inventore ipsum voluptate officiis beatae nisi animi sequi mollitia placeat eaque distinctio quam, adipisci quod, unde a dolorem.
+            <img class="respovsive-img" src="/call-center-landscape.jpg" alt="whyus">
+            </div>
+            <div class="list"><h2>Top 4 job positions</h2> <ol>
+<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime debitis ab quod ipsam error facilis quia, quasi itaque, temporibus architecto doloribus odit maiores necessitatibus vero consequuntur vitae neque quisquam dignissimos?</li>
+<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime debitis ab quod ipsam error facilis quia, quasi itaque, temporibus architecto doloribus odit maiores necessitatibus vero consequuntur vitae neque quisquam dignissimos?</li>
+<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime debitis ab quod ipsam error facilis quia, quasi itaque, temporibus architecto doloribus odit maiores necessitatibus vero consequuntur vitae neque quisquam dignissimos?</li>
+<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime debitis ab quod ipsam error facilis quia, quasi itaque, temporibus architecto doloribus odit maiores necessitatibus vero consequuntur vitae neque quisquam dignissimos?</li>
+
+            </ol>
+        </div>
+            
+        </div>
+
+        <div class="side">
+            <div class="add"><div style="font-family: Verdana" class="middle addy">Are you looking for a HOUSING?<br>Call +371 2544 5965</div></div>
+            <div class="sideba"><title>Post to fb</title>
+
+                <form  action="" method="post">
+                Name:<input type="text" name="input">
+                description : <input type="text" name="description">
+                <input type="submit" value="Submit">
+                </form>
+                
+            
+                
+        
+                
+                </div> 
+        
+        
+    
+        </div>
+        
+        </div>
+    </main>
+</body>
+<footer class="footercontent">© 2020 RCS STUDENT WORKS</footer>
+</html>
+ 
