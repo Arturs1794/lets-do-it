@@ -179,6 +179,11 @@ margin: 10px;}
 
 /* Media quary*/
 
+@media screen and (max-width: 576px)
+{
+    .logo
+    {display: none;}
+}
 
 @media screen and (max-width: 992px)
 {
@@ -205,11 +210,6 @@ margin: 10px;}
         }
 }
 
-@media screen and (max-width: 576px)
-{
-    .logo {
-        display: none;}
-    }
 
     @media screen and (max-width: 576px) {
    .list {
