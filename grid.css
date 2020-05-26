@@ -4,7 +4,15 @@
     height: 100vh; 
      grid-template-columns:repeat(3, 1fr);
      grid-template-rows: 20% 30% 50%;
-    
+     grid-template-areas: 
+     "header header header"
+    "hero hero hero"
+    "main main main"
+    "advert sidebar sidebar"
+    "footer footer footer"
+     
+     ;
+
     
     
      
@@ -21,6 +29,7 @@ grid-template-columns: 25% 50% 25%;}
     display: flexbox;
     justify-content: center;
     align-items: center;
+    grid-area: header;
 }
 
 
@@ -163,6 +172,7 @@ margin: 10px;}
     height: 60px;
     padding:align-content:center;
     background-color:cadetblue;(30, 162, 253)
+    grid-area: footer;
  }
 
 
@@ -175,7 +185,7 @@ margin: 10px;}
     .tool{
         display:none;
     }
-
+}
     @media screen and (max-width: 576px)
 {
     .add {
@@ -201,17 +211,33 @@ margin: 10px;}
         display: none;}
 
     @media screen and (max-width: 576px) {
-   .main {
+   .list {
 grid-column-start: 1;
 grid-column-end: 4;
 grid-row-start: 3;
 grid-row-end: 4;
     }
+@media screen and (max width: 992px) {
+    .list {
+        grid-column-start: 1;
+grid-column-end: 4;
+grid-row-start: 3;
+grid-row-end: 4;
+    }
+}
+
+
+
     @media screen and (max-width: 576px) {
         .nav {
             grid-column-start: 1;
             grid-column-end: 4;
             grid-row-start: 1;
             grid-row-end: 2;
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .article {
+            display: none;
         }
     }
